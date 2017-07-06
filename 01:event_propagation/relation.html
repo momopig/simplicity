@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>execute order</title>
+    <style>
+        .wrapper{
+            position: relative;
+            width: 600px;
+            height: 600px;
+            padding: 6px;
+        }
+        .station {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 76%;
+            height: 76%;
+            padding: 10px;
+            margin: auto;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="station" id='station1'>
+            <span>document</span>
+            <div class="station" id='station2'>
+                <span>html</span>
+                <div class="station" id='station3'>
+                    <span>body</span>
+                    <div class="station" id='station4'>
+                        <span>div</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    font-size: 14px;
+}
+.station {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    border: 1px solid #000;
+}

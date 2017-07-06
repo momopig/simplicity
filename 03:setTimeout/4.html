@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>长计算执行完毕</p>
+    <p id="text">Hello World!</p>
+    <p>字体颜色的变化顺序是：红、绿、蓝</p>
+    <script>
+        function longCal(index){
+            if (index === 45)debugger
+
+            if (index < 0 ) {
+                return 0;
+            }
+            if (index <= 2) {
+                return 1;
+            }
+            return longCal(index - 1) + longCal(index - 2);
+        }
+
+        // 执行一个长计算函数，大约会花费5s，在该函数执行完毕之前，页面的UI更新不会发生（如果你电脑CPU牛逼的话，可以把数字调大一点）
+        longCal(43);
+
+        // 执行一系列UI更新操作
+        var pEle = document.querySelector('#text');
+        pEle.style.color = 'red';
+
+        longCal(45);
+        // 当前回调函数会作为一个新的任务放入到任务队列中，所以在当前任务执行前，UI渲染线程会得到一次运行机会
+//        setTimeout(function () {
+//            pEle.style.color = 'green';
+//        }, 2000);
+//
+//        setTimeout(function () {
+//            pEle.style.color = 'blue';
+//        }, 5000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.thread:js_free_ui_begin</title>
+</head>
+<body>
+<p id="text">Hello World!</p>
+<script>
+
+    /**
+     * @description 斐波纳切数列长计算函数
+     * */
+    function longCal(index){
+        if (index === 45)debugger
+
+        if (index < 0 ) {
+            return 0;
+        }
+        if (index <= 2) {
+            return 1;
+        }
+        return longCal(index - 1) + longCal(index - 2);
+    }
+
+    function task1 () {
+
+        // 先执行一系列UI更新操作, 但是UI更新不会即时发生，需等当前任务完成：JS解析线程空闲，GUI渲染线程方能获得执行机会
+        var pEle = document.querySelector('#text');
+        pEle.style.color = 'red';
+
+        // 长计算函数大约花费5s，5s后，js解析线程空闲，GUI渲染线程获得执行机会，并更新UI，hello world变红
+        longCal(43);
+
+    }
+
+    // 执行第一个任务
+    task1();
+
+
+</script>
+</body>
+</html>

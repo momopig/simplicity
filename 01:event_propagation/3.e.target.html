@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>e.target of listener</title>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="station" id='station1'>
+            station1
+            <div class="station" id='station2'>
+                station2
+                <div class="station" id='station3'>
+                    station3
+                    <div class="station" id='station4'>
+                        station4(click me)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>总结：</p>
+    <p>1. 不要将listeners的执行和浏览器的事件解析和捕获过程（用户行为解析和事件对象的创建）混淆在一起，后者完成后（后置条件：事件对象生成和初始化完毕），前者才开始；</p>
+    <p>2. 在事件源对象确定之后，事件listeners方开始执行；</p>
+    <p>3. 由同一个用户行为触发执行的listener, 无论其实是在Capturing方向还是在Bubbling方向，其event target均一样</p>
+    <script type='text/javascript'>
+        var s1 = document.getElementById('station' + 1);
+        var s2 = document.getElementById('station' + 2);
+        var s3 = document.getElementById('station' + 3);
+        var s4 = document.getElementById('station' + 4);
+
+        s1.addEventListener('click',function(e){
+            console.log('Capturing direction:  station1' + ':the event target is ' + e.target.id);
+        }, true);
+
+        s2.addEventListener('click',function(e){
+            console.log('Capturing direction:  station2' + ':the event target is ' + e.target.id);
+        }, true);
+
+        s3.addEventListener('click',function(e){
+            console.log('Capturing direction:  station3' + ':the event target is ' + e.target.id);
+        }, true);
+
+        s4.addEventListener('click',function(e){
+            console.log('Capturing direction:  station4' + ':the event target is ' + e.target.id);
+        }, true);
+
+        s1.addEventListener('click',function(e){
+            console.log('Bubbling direction:  station1' + ':the event target is ' + e.target.id);
+        }, false);
+
+        s2.addEventListener('click',function(e){
+            console.log('Bubbling direction:  station2' + ':the event target is ' + e.target.id);
+        }, false);
+
+        s3.addEventListener('click',function(e){
+            console.log('Bubbling direction:  station3' + ':the event target is ' + e.target.id);
+        }, false);
+
+        s4.addEventListener('click',function(e){
+            console.log('Bubbling direction:  station4' + ':the event target is ' + e.target.id);
+        }, false);
+    </script>
+</body>
+</html>

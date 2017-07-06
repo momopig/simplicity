@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.setTimeout:create_a_new_task</title>
+</head>
+<body>
+    <script>
+        function task1 () {
+            console.log(1);
+
+            // 当到达timer的预设时间时，会创建一个新的任务task2，并插入到任务队列（timer的回调函数在task2中执行）
+            setTimeout(function () {
+
+                //实际放到任务2中执行
+                console.log(2);
+            }, 0);
+            console.log(3);
+        }
+
+        // 输出顺序为132：任务1中先输出1、3，任务2中输出2
+        task1();
+    </script>
+</body>
+</html>

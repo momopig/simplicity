@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul {
+            background: red;
+        }
+        li, span {
+            display: inline-block;
+        }
+        li  {
+            background: #dedede;
+            padding: 10px;
+        }
+        span {
+            background: greenyellow;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <ul id="container">
+        <li>
+            <span>1</span>
+        </li>
+        <li>
+            <span>2</span>
+        </li>
+        <li>
+            <span>3</span>
+        </li>
+        <li>
+            <span>4</span>
+        </li>
+        <li>
+            <span>5</span>
+        </li>
+    </ul>
+    <p>说明：</p>
+    <p>1. 不仅是点击绿色区域（对应span），还是灰色区域（对应li），执行的都是li委托给ul的handler, e.currentTarget均为li(即始终认为是执行了li的event handler);</p>
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script>
+        var handler = function (e) {
+            console.log('************' + e.data.msg + '************');
+
+            console.log('// event.target');
+            console.log(e.target);
+
+            console.log('// event.currentTarget');
+            console.log(e.currentTarget);
+
+            console.log('// this');
+            console.log(this);
+
+            console.log('// this === event.target');
+            console.log(this === e.target);
+
+            console.log('// this === event.currentTarget');
+            console.log(this === e.currentTarget);
+
+            console.log('// innerHTML');
+            console.log($(this).html());
+        };
+
+    /**
+     * 自实现一个简易版的事件委托函数
+     *
+     * @param { string } containerSelector 公共祖先元素对应的选择器
+     * @param { string } innerSelector 委托祖先元素进行事件处理的子元素的选择器
+     * @param { string } eventType 可传播的事件类型, 如click
+     * @param { plainObject } data 给事件handler传递的数据对象
+     * @param { function } handler 被委托的事件处理函数
+     *
+     * */
+    function eventDelegate(containerSelector, innerSelector, eventType, data, handler) {
+        var container = $(containerSelector)[0];
+        container.addEventListener(eventType, function (e) {
+            var $target = $(e.target);
+            var matchTarget = $target.closest(innerSelector)[0];
+            var newEvent;
+            if (!matchTarget) {
+                return;
+            }
+            if (!$.contains($(containerSelector)[0], matchTarget)) {
+                return;
+            }
+            newEvent = $.Event(eventType);
+            newEvent.target = e.target;
+            newEvent.currentTarget = matchTarget;
+            newEvent.data = data;
+            handler.call(matchTarget, newEvent);
+        });
+    }
+
+        $(function () {
+            $(document).on();
+            eventDelegate('#container', 'li', 'click', {msg: 'use DIY delegation'}, handler);
+            $('#container').on('click', 'li', {msg: 'use jquery delegation'}, handler);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li class="tab-item" data-tab-name="basic">基础配置</li>
+    <li class="tab-item" data-tab-name="senior">高级配置</li>
+</ul>
+<script src="js/jquery-1.12.3.min.js"></script>
+<script>
+    $(function () {
+        $('.tab-item').on('click', function () {
+
+            // data的自定义数据属性使用驼峰命名法
+            var name = $(this).data('tabName');
+            alert(name);
+        });
+    });
+</script>
+</body>
+</html>

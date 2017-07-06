@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>execute order</title>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="station" id='station1'>
+            station1
+            <div class="station" id='station2'>
+                station2
+                <div class="station" id='station3'>
+                    station3
+                    <div class="station" id='station4'>
+                        station4(click me)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>总结：</p>
+    <p>1. 前往Capturing方向的listener, 其执行顺序是"从外到内"；</p>
+    <p>2. 前往Bubbling方向的listener, 其执行顺序是"从内到外"；</p>
+    <p>3. 前往Capturing方向的全部listener执行完毕后，方开始执行Bubbling方向的listener;</p>
+    <p>4. 嵌套的多个dom元素间，其listener的执行顺序，依旧遵循"先上车（绑定到dom元素）先执行"原则；</p>
+    <script type='text/javascript'>
+        var s1 = document.getElementById('station' + 1);
+        var s2 = document.getElementById('station' + 2);
+        var s3 = document.getElementById('station' + 3);
+        var s4 = document.getElementById('station' + 4);
+
+        s1.addEventListener('click',function(e){
+            console.log('Capturing direction:  station1');
+        }, true);
+
+        s1.addEventListener('click',function(e){
+            console.log('Bubbling direction:  station1');
+        }, false);
+
+        s2.addEventListener('click',function(e){
+            console.log('Capturing direction:  station2');
+        }, true);
+
+        s2.addEventListener('click',function(e){
+            console.log('Bubbling direction:  station2');
+        }, false);
+
+        s3.addEventListener('click',function(e){
+            console.log('Capturing direction:  station3');
+        }, true);
+
+        s3.addEventListener('click',function(e){
+            console.log('Bubbling direction:  station3');
+        }, false);
+
+        s4.addEventListener('click',function(e){
+            console.log('Capturing direction:  station4');
+        }, true);
+
+        s4.addEventListener('click',function(e){
+            console.log('Bubbling direction:  station4');
+        }, false);
+    </script>
+</body>
+</html>
