@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数柯里化</title>
+    <script type="text/javascript">
+
+        /*
+        * @desc Curry化函数的一般实现
+        *
+        * */
+        function Curry(fn){
+            var stored_args = Array.prototype.slice.call(arguments, 1);
+            return function(){
+                var new_args = Array.prototype.slice.call(arguments),
+                    args = stored_args.concat(new_args);
+                return fn.apply(null,args);
+            };
+
+        }
+
+        var doSomething = function(_do, something){
+            console.log(_do + ',' + something);
+        }
+
+        //没有使用Curry化，如果同时对多个人说hello,每次都需要传入"hello"给_do变量
+        console.log('************原始函数的处理结果*****************');
+        doSomething('hello','John');
+        doSomething('hello','Marry');
+        doSomething('hello','Tom');
+
+        //使用Curry化，在多次调用同一个函数且输入的部分参数值总是一样时，就能减少重复输入
+        console.log('****对函数进行Currying, 将参数_do固定为hello****');
+        var newDoSomething = Curry(doSomething,'hello');
+
+        console.log('*********函数经过Curry化后的处理结果************');
+        newDoSomething('John');
+        newDoSomething('Marry');
+        newDoSomething('Tom');
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

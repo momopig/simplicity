@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS单例模式的实现</title>
+    <script type="text/javascript">
+
+
+        /**
+         * @desc 使用闭包实现JS的单例模式: 立即函数调用完毕，返回一个闭包函数
+         *
+         * */
+
+        var getSingleInstance = (function() {
+
+            function China(){
+                this.name = "China";
+            }
+
+            // 在立即函数内实例化一个China对象
+            var instance = new China();
+
+            return function () {
+
+                // instance变量定义在立即函数内，可看作是当前匿名函数的自由变量
+                return instance;
+            }
+
+        }());
+
+        var instance1 = getSingleInstance();
+        var instance2 = getSingleInstance();
+
+        console.log('***比较通过getSingleInstance()获取的两个对象是否一致***');
+        console.log('instance1 === instance2 is :' + (instance1 === instance2)); // 结果为 true
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

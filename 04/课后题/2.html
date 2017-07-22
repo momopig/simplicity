@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+
+        function test() {
+
+            var data = [], i;
+
+            for (i = 0; i < 4; i++) {
+                data[i] = function () {
+                    console.log(i);
+                }
+            }
+
+            return data[0];
+        }
+
+        test()();
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
