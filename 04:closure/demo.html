@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+        <script>
+
+            function closureWrapper () {
+
+                var val = 1;
+
+                return function () {
+                    return ++val;
+                }
+            }
+
+            var closureRef = closureWrapper();
+
+            console.log(closureRef());
+
+        </script>
+
+
+</head>
+<body>
+
+</body>
+</html>
