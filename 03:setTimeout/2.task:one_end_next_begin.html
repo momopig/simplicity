@@ -5,36 +5,36 @@
     <title>2.task:one_end_next_begin</title>
 </head>
 <body>
-<script>
 
-    /**
-     * @description 斐波纳切数列长计算函数
-     * */
-    function longCal(index){
-        if (index === 45)debugger
+    <script>
 
-        if (index < 0 ) {
-            return 0;
+        /**
+         * @description 斐波纳切数列长计算函数
+         * */
+        function longCal(index){
+            if (index < 0 ) {
+                return 0;
+            }
+            if (index <= 2) {
+                return 1;
+            }
+            return longCal(index - 1) + longCal(index - 2);
         }
-        if (index <= 2) {
-            return 1;
+
+        function task1 () {
+            console.log('task1 is running');
+            setTimeout(function () {
+                console.log('task 2 begins');
+            }, 0);
+            // 长计算函数大约花费5s，在任务1未完成之前，任务2不被执行(特别地，当task 1死循环时，task 2永远不被执行)
+            longCal(43);
+
+            //while (true);
         }
-        return longCal(index - 1) + longCal(index - 2);
-    }
 
-    function task1 () {
-        console.log('task1 is running');
-        setTimeout(function () {
-            console.log('task 2 begins');
-        }, 0);
-        // 长计算函数大约花费5s，在任务1未完成之前，任务2不被执行(特别地，当task 1死循环时，task 2永远不被执行)
-        longCal(43);
+        // 执行第一个任务
+        task1();
+    </script>
 
-        //while (true);
-    }
-
-    // 执行第一个任务
-    task1();
-</script>
 </body>
 </html>

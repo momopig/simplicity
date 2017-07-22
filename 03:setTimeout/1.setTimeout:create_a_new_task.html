@@ -9,7 +9,7 @@
         function task1 () {
             console.log(1);
 
-            // 当到达timer的预设时间时，会创建一个新的任务task2，并插入到任务队列（timer的回调函数在task2中执行）
+            // 当setTimeout的预设时间timeout时，时间线程会将callback封装到一个新的任务，并将该任务插入到任务队列尾部
             setTimeout(function () {
 
                 //实际放到任务2中执行
