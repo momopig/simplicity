@@ -6,17 +6,28 @@
 
         <script>
 
+            /**
+             * @desc 在全局函数作用域声明一个闭包的外包函数
+             *
+             * */
             function closureWrapper () {
 
+                // 外包函数的局部变量
                 var val = 1;
 
+                // 返回一个内嵌的匿名函数对象
                 return function () {
+
+                    // 在匿名函数内部访问其外包函数closureWrapper的局部变量
                     return ++val;
                 }
             }
 
+            // 在外包函数执行完毕时，返回一个匿名函数对象，该匿名对象
+            // 被外包函数的父级作用域的closureRef变量引用，意味着闭包的生成
             var closureRef = closureWrapper();
 
+            // 在外包函数的父级作用域，可以通过调用闭包函数来访问外包函数的局部变量
             console.log(closureRef());
 
         </script>
