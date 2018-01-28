@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding-left: 20px;
+        }
+        .common-block-element {
+            display: block;
+            width: 400px;
+            border:1px solid green;
+        }
+        .bfc {
+            overflow: auto;
+        }
+        .sub-element {
+            float: left;
+            height: 20px;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    BFC元素：
+    <div class="common-block-element bfc">
+        <div class="sub-element">浮动子元素</div>
+        <div class="sub-element">浮动子元素</div>
+        <div class="sub-element">浮动子元素</div>
+    </div>
+    普通块级元素：
+    <div class="common-block-element">
+        <div class="sub-element">浮动子元素</div>
+        <div class="sub-element">浮动子元素</div>
+        <div class="sub-element">浮动子元素</div>
+    </div>
+
+    <br>
+    说明：
+    <p>1. BFC元素，能够识别浮动子元素，浮动子元素参与BFC元素的高度计算，不会出现“高度塌陷”问题；</p>
+    <p>2. 普通块级元素，不能够识别浮动子元素，会出现“高度塌陷”问题；</p>
+</body>
+</html>

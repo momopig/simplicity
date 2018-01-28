@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding-left: 20px;
+        }
+        .common-block-element {
+            display: block;
+            width: 400px;
+            height: 200px;
+            background: green;
+        }
+        .bfc {
+            overflow: auto;
+            border: 1px solid red;
+        }
+        .sub-element {
+            height: 20px;
+            width: 250px;
+            margin-top: 20px;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="common-block-element">
+        <div class="sub-element">margin-top为20px的子元素</div>
+        普通块级元素
+    </div>
+    <div class="common-block-element bfc">
+        <div class="sub-element">margin-top为20px的子元素</div>
+        BFC 元素
+    </div>
+    说明：
+    <p>1. 普通块级元素，其子元素的margin-top，不会隔开自身与父元素（普通块级元素），但是会作用到父元素外部（将父元素和叔伯元素或祖父元素隔开）；</p>
+    <p>2. 而BFC元素，其子元素的margin-top，则会隔开自身与父元素（BFC元素），而不会影响到父元素外部；</p>
+</body>
+</html>

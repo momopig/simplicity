@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding-left: 20px;
+        }
+        .wrapper {
+            margin-top: 10px;
+            border: 1px solid red;
+        }
+        .common-block-element {
+            display: block;
+            height: 40px;
+            width: 400px;
+            background: yellow;
+        }
+        .bfc {
+            overflow: auto;
+        }
+        .float-element {
+            float: left;
+            height: 20px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="float-element">浮动的兄弟元素</div>
+        <div class="common-block-element">普通块级元素</div>
+    </div>
+
+    <div class="wrapper">
+        <div class="float-element">浮动的兄弟元素</div>
+        <div class="common-block-element bfc">BFC元素(width: 400px)</div>
+    </div>
+
+    <br>
+    说明：
+    <p>1. 普通块级元素，不能够识别浮动的兄弟元素，会被浮动的兄弟元素覆盖部分内容；</p>
+    <p>2. 占据文档流的或浮动的BFC元素，能够识别浮动的兄弟元素，不会被浮动的兄弟元素覆盖；</p>
+    <p>3. 占据文档流的或浮动的BFC元素，能和识别浮动的兄弟元素同行显示；</p>
+</body>
+</html>
