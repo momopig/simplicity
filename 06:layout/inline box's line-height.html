@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .inline-element {
+            background: yellow;
+            font-size: 20px;
+            line-height: 40px;
+        }
+        .top {
+            vertical-align: top;
+        }
+        .text-top {
+            vertical-align: text-top;
+        }
+        .baseline {
+            vertical-align: baseline;
+        }
+        .text-bottom {
+            vertical-align: text-bottom;
+        }
+        .bottom {
+            vertical-align: bottom;
+        }
+        img {
+            height: 40px;
+        }
+    </style>
+    <body>
+        <span class="inline-element">
+            Asimplicity<img src="http://image.zhangxinxu.com/image/blog/201508/anywhere.jpg" class="top"/>
+            simplicity<img src="#" class="text-top"/>
+            simplicity<img src="#" class="baseline" />
+            simplicity<img src="#" class="text-bottom"/>
+            simplicity<img src="#" class="bottom"/>
+            <!-- <br>
+            Asimplicity<img src="#" class="top"/>
+            simplicity<img src="#" class="text-top"/>
+            simplicity<img src="#" class="baseline" />
+            simplicity<img src="#" class="text-bottom"/>
+            simplicity<img src="#" class="top"/> -->
+        </span>
+    </body>
+</html>
