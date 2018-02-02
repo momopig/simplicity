@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+ 
+        }
+        .wrapper {
+            display: inline-block; /* to be BFC */
+            line-height: 32px;
+            font-size: 20px;
+        }
+        .span-1 {
+            float: left;
+            line-height: 40px;
+            background: red;
+        }
+        .span-2 {
+            float: left;
+            line-height: 38px;
+            background: green;
+        }
+        .span-3 {
+            float: left;
+            clear: left;
+            line-height: 50px;
+            background: yellow;
+        }
+
+    </style>
+    <body>
+        <div class="wrapper">
+            <span class="span-1">line-height: 40px;</span>
+            <span class="span-2">line-height: 38px;</span>
+            <span class="span-3">line-height: 50px;</div>
+        </div>
+        <p>1. 每一行的line-height，即可以由父元素设置，也可以由子元素设置，但取最大的line-height；</p>
+        <p>2. 如果一个块级元素不设置height，那么其height由所有行的line-height之和；</p>
+        <p>3. 每一行的line-height都可以不同；</p>
+    </body>
+</html>
