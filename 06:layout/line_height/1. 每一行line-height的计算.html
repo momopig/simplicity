@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding: 40px;
+        }
+        .line-box {
+            background: yellow;
+            line-height: 32px;
+            font-size: 20px;
+        }
+        .span-1 {
+            line-height: 40px;
+            background: red;
+        }
+        .span-2 {
+            line-height: 38px;
+            background: green;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+    </style>
+    <body>
+        <div class="line-box">
+            <span class="span-1">span(line-height: 40px)</span>
+            <span class="span-2">span(line-height: 38px)</span>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="line-box">
+            <span class="span-1">span(line-height: 40px)</span>
+            <span class="span-2">span(line-height: 38px)</span>
+            <img src="#"/>
+        </div>
+        <br>
+        <br>
+        <br>
+        <p>说明：</p>
+        <p>1. 每一行的line-height，既可以由父元素line-height设置（32px），也可以由子元素line-height设置（分别是40px和38px），但取最大的line-height（40px）;</p>
+        <p>2. 特别地，如果一行内还有可以设置height的可置换元素如img（height: 50px），且该元素的高度大于设置的最大line-height（40px）时，那么该行会被撑高，浏览器会重新计算line-height(最终结果为63px)；</p>
+    </body>
+</html>

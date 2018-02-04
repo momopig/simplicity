@@ -6,37 +6,37 @@
             padding: 0;
         }
         body {
- 
+            padding: 40px;
         }
-        .wrapper {
-            display: inline-block; /* to be BFC */
+        .line-box {
+            background: yellow;
             line-height: 32px;
             font-size: 20px;
         }
         .span-1 {
-            float: left;
             line-height: 40px;
             background: red;
         }
         .span-2 {
-            float: left;
             line-height: 38px;
             background: green;
         }
         .span-3 {
-            float: left;
-            clear: left;
             line-height: 50px;
-            background: yellow;
+            background: blue;
         }
 
     </style>
     <body>
-        <div class="wrapper">
-            <span class="span-1">line-height: 40px;</span>
-            <span class="span-2">line-height: 38px;</span>
-            <span class="span-3">line-height: 50px;</div>
+        <div class="line-box">
+            <span class="span-1">span(line-height: 40px)</span>
+            <span class="span-2">span(line-height: 38px)</span>
+            <br>
+            <span class="span-3">span(line-height: 50px)</span>
         </div>
+        <br>
+        <br>
+        <br>
         <p>说明：</p>
         <p>1. 块级元素每一行的line-height都可以不同；</p>
         <p>2. 如果一个块级元素不设置height，那么其height为所有行的line-height之和，特别地，当块级元素只有一行时，line-height值即为其height值；</p>
