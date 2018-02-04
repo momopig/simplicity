@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+ 
+        }
+        .wrapper {
+            display: inline-block; /* to be BFC */
+            line-height: 32px;
+            font-size: 20px;
+        }
+        .span-1 {
+            line-height: 40px;
+            background: red;
+        }
+        .span-2 {
+            line-height: 38px;
+            background: green;
+        }
+        img {
+            width: 40px;
+            height: 50px;
+        }
+
+    </style>
+    <body>
+        <div class="wrapper">
+            <span class="span-1">line-height: 40px;</span>
+            <span class="span-2">line-height: 38px;</span>
+            <img src="#"/>
+        </div>
+        <p>说明：</p>
+        <p>1. 每一行的line-height，即可以由父元素line-height设置，也可以由子元素line-height设置，但取最大的line-height；</p>
+        <p>2. 如果一行内还有可以设置height的可置换元素，且该元素的高度大于设置的最大line-height时，那么该行被撑高，line-height会取计算值；</p>
+    </body>
+</html>

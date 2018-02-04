@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+ 
+        }
+        .wrapper {
+            display: inline-block; /* to be BFC */
+            line-height: 32px;
+        }
+        .inline-element {
+            display: inline;
+            background: green;
+            font-size: 20px;
+        }
+        img {
+            width: 20px;
+            height: 40px;
+        }
+    </style>
+    <body>
+        <div class="wrapper">
+            <span class="inline-element">line-height: 40px;font-size: 20px;</span>
+            <span class="inline-element"><img src="#"/></span>
+        </div>
+        <p>说明：</p>
+        <p>1. line-height的取值不会影响到不可置换行内元素的height;
+        <p>2. 不可置换行内元素的height，由font-size和浏览器的默认解析机制决定（一般>font-size，大多少则取决于浏览器解析机制）；</p>
+    </body>
+</html>
