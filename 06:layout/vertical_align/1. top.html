@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding: 40px;
+        }
+        .line-box {
+            height: 80px;
+            line-height: 80px;
+            font-size: 20px;
+            background: yellow;
+        }
+        .span-1 {
+            background: red;
+        }
+        .inline-block {
+            display: inline-block;
+            height: 30px;
+            border: 1px solid #000;
+        }
+        .inline, .inline-block, img, label, input, textarea, select, button {
+            vertical-align: text-top;
+        }
+    </style>
+    <body>
+        <!-- <div class="line-box">
+            text<span class="span-1">text span(vertical-align: baseline;)</span>
+            <div class="inline-block">div(display:inline-block;)</div>
+        </div> -->
+        <div class="line-box">
+                text
+                <span class="span-1">span(vertical-align: baseline;)</span>
+                <span class="inline">inline</span>
+                <div class="inline-block">inline-block</div>
+                <img class="" src="https://mdn.mozillademos.org/files/12245/frame_image.svg">
+                <label>label</label>
+                <select value="select"></select>
+                <input value="input" />
+                <textarea>textarea</textarea>
+                <button>button</button>
+            </div>
+        <p>说明：</p>
+    </body>
+</html>
