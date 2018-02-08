@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-size: 20px;
+        }
+        .empty-block {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .line {
+            background: yellow;
+        }
+
+    </style>
+    <body>
+        <div class="line">第一行</div>
+        <div class="empty-block"></div>
+        <div class="line">第二行</div>
+        <p>说明：</p>
+        <p>1. 两行之间的空白区域，为一个空块元素；</p>
+        <p>2. 空块的margin-top为40px, margin-bottom为20px；</p>
+        <p>3. 两行之间的距离为40px，可知空块元素的margin-top和margin-bottom发生了合并，取较大值；</p>
+    </body>
+</html>
