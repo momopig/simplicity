@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding: 20px;
+        }
+        .wrapper {
+            border: 1px solid #000;
+        }
+        .parent {
+            background: yellow;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .child {
+            background: green;
+            width: 200px;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+        .first-child {
+            margin-top: 20px;
+
+        }
+        .last-child {
+            margin-bottom: 20px;
+        }
+    </style>
+    <body>
+        <div class="wrapper">
+            <div class="parent">
+                <div class="child first-child">第一个元素</div>
+                <div class="child last-child">最后一个元素</div>
+            </div>
+        </div>
+        <br>
+
+        <p>说明：</p>
+        <p>1. 父元素的margin-top(40px)和第一个子元素的margin-top(20px)的融合(取较大的40px)；</p>
+        <p>2.  父元素的margin-bottom(40px)和最后一个子元素的margin-bottom(20px)的融合(取较大的40px)；</p>
+    </body>
+</html>
