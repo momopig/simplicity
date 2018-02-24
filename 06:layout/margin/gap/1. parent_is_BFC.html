@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding: 20px;
+        }
+
+        .parent {
+            display: inline-block; /* to be BFC */
+            background: yellow;
+        }
+
+        .child {
+            background: green;
+            width: 280px;
+            margin: 20px;
+            text-align: center;
+
+        }
+
+    </style>
+    <body>
+        <div class="parent">
+            <div class="child">子元素(margin: 20px)</div>
+        </div>
+        <br>
+        <br>
+        <p>说明：</p>
+        <p>1. 父元素（黄色）是BFC元素，子元素（绿色）垂直方向上的margin能够隔离父元素；</p>
+    </body>
+</html>

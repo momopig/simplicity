@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding: 20px;
+        }
+
+        .parent {
+            background: yellow;
+        }
+
+        .child {
+            background: green;
+            width: 200px;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+        .first-child {
+            margin-bottom: 40px;
+
+        }
+        .last-child {
+            margin-top: 20px;
+
+        }
+    </style>
+    <body>
+            <div class="parent">
+                <div class="child first-child">第一个元素(margin-bottom: 40px)</div>
+                <div class="child last-child">第二个元素(margin-top: 20px)</div>
+            </div>
+        <br>
+
+        <p>说明：</p>
+        <p>1. 第一个元素的margin-bottom(40px)和第二个元素的margin-top(20px)发生融合(取较大的40px)；</p>
+    </body>
+</html>

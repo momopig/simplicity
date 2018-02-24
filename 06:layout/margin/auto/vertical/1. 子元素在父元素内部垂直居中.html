@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding: 20px;
+        }
+
+        .parent {
+            position: relative;
+            background: yellow;
+            height: 100px;
+        }
+        .child {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+
+            background: green;
+            width: 140px;
+            height: 20px;
+            margin: auto 0;
+
+            text-align: center;
+        }
+    </style>
+    <body>
+        <div class="parent">
+            <div class="child">垂直居中的子元素</div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <p>说明：</p>
+        <p>a. 绝对定位的子元素的top为0，其轮廓（包含margin）的上边界与其包含块内容区域的顶部紧贴;</p>
+        <p>b. 由已知求未知：包含块的height已知，子元素的top值和bottom值之和为0，即子元素的outerHeight可求，又因为子元素height已知，故垂直方向上的剩余高度可以确定，当子元素的margin-top和margin-bottom均为auto时，将平分剩余的高度；</p>
+       
+
+
+    </body>
+</html>

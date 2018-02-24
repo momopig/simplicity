@@ -19,7 +19,7 @@
 
         .child {
             background: green;
-            width: 200px;
+            width: 290px;
             margin: 0 auto;
             text-align: center;
 
@@ -35,14 +35,14 @@
     <body>
         <div class="wrapper">
             <div class="parent">
-                <div class="child first-child">第一个元素</div>
-                <div class="child last-child">最后一个元素</div>
+                <div class="child first-child">第一个子元素(margin-top: 20px)</div>
+                <div class="child last-child">最后一个子元素(margin-bottom: 20px)</div>
             </div>
         </div>
         <br>
 
         <p>说明：</p>
-        <p>1. 父元素的margin-top(40px)和第一个子元素的margin-top(20px)发生融合(取较大的40px)；</p>
-        <p>2. 父元素的margin-bottom(40px)和最后一个子元素的margin-bottom(20px)发生融合(取较大的40px)；</p>
+        <p>1. 父元素(黄色)的margin-top(40px)和第一个子元素的margin-top(20px)发生融合(取较大的40px)；</p>
+        <p>2. 父元素(黄色)的margin-bottom(40px)和最后一个子元素的margin-bottom(20px)发生融合(取较大的40px)；</p>
     </body>
 </html>
