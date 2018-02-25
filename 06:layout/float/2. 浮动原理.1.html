@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            box-sizing: border-box;
+            width: 50px;
+            height: 100px;
+        }
+  
+
+        .fl {
+            float: left;
+            border: 1px solid lime;
+        }
+        .fr {
+            float: right;
+            border: 1px solid red;
+        }
+
+    </style>
+    <body>
+        <div class="fl">left</div>
+        <div class="fr">right</div>
+        <div class="fl">left</div>
+        <div class="fr">right</div>
+        <div class="fl">left</div>
+        <div class="fr">right</div>
+        <div class="fl">left</div>
+        <div class="fr">right</div>
+
+        <br>
+        <br>
+        <p>说明:</p>
+        <p>a. 有四个连续左浮动的元素，每个元素宽度为30%；</p>
+        <p>b. 当一行排满三个元素时，当前行只剩10%的宽度，不足以容纳第四个左浮动元素;</p>
+        <p>c. 第四个浮动元素，从起始位置（最后一行的最左侧空白）开始向左浮动，直到遇到第二个浮动元素的边界;</p>
+    </body>
+</html>
