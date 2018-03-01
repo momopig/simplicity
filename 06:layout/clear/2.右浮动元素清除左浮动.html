@@ -15,24 +15,14 @@
         }
         .fr {
             float: right;
+            /* clear: left; */
             clear: right;
             border: 1px solid red;
         }
-        div:nth-child(1) {
-            margin-bottom: 10px;
-        }
-        div:nth-child(2) {
-            height: 200px;
-        }
-        div:nth-child(3) {
-            clear: left;
-            margin-top: 10px;
-        }
-
     </style>
     <body>
-        <div class="fl"></div>
-        <div class="fl"></div>
-        <div class="fl">clear:left</div>
+        <div class="fl">float: left;</div>
+        <!-- <div class="fr">float: right;<br>clear: left;</div> -->
+        <div class="fr">float: right;<br>clear: right;</div>
     </body>
 </html>
