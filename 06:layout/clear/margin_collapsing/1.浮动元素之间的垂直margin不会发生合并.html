@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding: 20px;
+        }
+        div {
+            width: 200px;
+            height: 150px;
+        }
+        .fl {
+            float: left;
+            border: 1px solid green;
+        }
+
+        div:nth-child(1) {
+            margin-bottom: 10px;
+        }
+
+        div:nth-child(2) {
+            clear: left;
+            margin-top: 10px;
+        }
+
+    </style>
+    <body>
+        <div class="fl">
+            <p>float:left;</p>
+            <p>margin-bottom: 10px;</p>
+        </div>
+        <div class="fl">
+            <p>float:left;</p>
+            <p>clear:left;</p>
+            <p>margin-top: 10px;</p>
+        </div>
+        <br>
+        <br>
+        <p style="clear: left">说明：</p>
+        <p>a. 两个浮动元素之间，垂直方向上的margin不会发生合并,之间的距离为20px</p>
+    </body>
+</html>
