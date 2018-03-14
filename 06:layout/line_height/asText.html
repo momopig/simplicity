@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding: 40px;
+        }
+        .line-box {
+            border: 1px solid black;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+            vertical-align: baseline;
+            /* vertical-align: bottom;  */
+        }
+    </style>
+    <body>
+        <div class="line-box">
+            aoezx<img src="https://mdn.mozillademos.org/files/12245/frame_image.svg"/>
+        </div>
+        <br>
+        <p>说明：</p>
+        <p>
+            a. img元素的vertical-align属性值为默认值baseline时，距离父元素底部会有一段空白，该空白为行框baseline线到bottom线的垂直距离；
+            b. img元素的vertical-align属性值为top或bottom时，不会有该空白，img的margin box高度刚好为行框的高度；
+        </p>
+
+    </body>
+</html>
