@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding: 40px;
+        }
+        div {
+            background: yellow;
+            line-height: 32px;
+            font-size: 20px;
+        }
+    </style>
+    <body>
+        <div class="block">
+            div(line-height: 32px)
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="block">
+            div(line-height: 32px)
+            <br>
+            div(line-height: 32px)
+        </div>
+        <br>
+        <p>说明：</p>
+        <p>1. 当一个块元素不设置height，而且这个块元素仅有一行时，那么其height刚好等于line-height；</p>
+        <p>2. 当一个块元素不设置height，而且这个块元素有多行时，那么其height刚好等于每一行的line-height之和；</p>
+    </body>
+</html>
