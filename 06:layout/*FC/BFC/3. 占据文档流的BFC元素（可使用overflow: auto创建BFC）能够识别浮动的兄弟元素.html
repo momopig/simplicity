@@ -34,21 +34,17 @@
 <body>
     <div class="wrapper">
         <div class="float-element">浮动的兄弟元素</div>
-        <div class="common-block-element bfc">BFC元素(width: 400px)</div>
+        <div class="common-block-element">普通块级元素</div>
     </div>
 
     <div class="wrapper">
         <div class="float-element">浮动的兄弟元素</div>
-        <div class="common-block-element bfc" style="width: auto">BFC元素(width: auto)</div>
+        <div class="common-block-element bfc">BFC元素(width: 400px)</div>
     </div>
 
-    <div class="wrapper">
-            <div class="float-element">浮动的兄弟元素</div>
-            <div class="common-block-element bfc" style="width: 100%">BFC元素(width: 100%)</div>
-        </div>
-    
     <br>
     说明：
-    <p>1. 文档流中的BFC元素（非float、非absoute、非fixed）, width为auto时，会占满当前行的剩余宽度；</p>
+    <p>a. 普通块级元素，不能够识别浮动的兄弟元素，会被浮动的兄弟元素覆盖部分内容；</p>
+    <p>b. 占据文档流动的BFC元素（可使用overflow: auto创建BFC），能够识别浮动的兄弟元素，不会被浮动的兄弟元素覆盖，与之同行显示；</p>
 </body>
 </html>

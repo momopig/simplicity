@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            height: 5000px;
+        }
+        .absolute {
+            position: absolute;
+            bottom: 0;
+            background: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <body>
+        <div class="wrapper">
+            <div class="absolute">position: absolute</div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <p>说明：</p>
+        <p>1. 找不到最近非static祖先元素的绝对定位元素，其相对于ICB定位，而不是根元素;</p>
+    </body>
+</html>
