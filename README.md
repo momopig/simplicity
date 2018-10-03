@@ -6,11 +6,11 @@
   
 ### 07期：[《实现兼容IE9+的svg截图和异步下载功能》](https://mp.weixin.qq.com/s/4Jf3SDW-JoeqwG5dvWv2Vw)
 摘要：
-一起来探索如何实现兼容IE9+的svg截图和异步下载功能，并借此来了解web截图实现方案的发展史、浏览器tained canvas的安全性限制以及node用于解决浏览器兼容性问题的理论基础；
+一起来探索如何实现兼容IE9+的svg截图和异步下载功能，并借此来了解web截图实现方案的发展史、浏览器tained canvas的安全性限制以及node用于解决浏览器兼容性问题的理论基础。
   
 ### 06期：[《前端布局基础概述》](https://mp.weixin.qq.com/s/-LcNZWFFty2lWuND6uuNNA)
 摘要：
-从CSS盒模型及其发展史、元素的分类及其布局特性、格式化上下文(Formatting Context)、包含块、基本原理（文档流、浮动、清除浮动、定位、行框、margin）这五大模块，系统介绍前端的布局基础；并纠正了MDN一些错误；
+从CSS盒模型及其发展史、元素的分类及其布局特性、格式化上下文(Formatting Context)、包含块、基本原理（文档流、浮动、清除浮动、定位、行框、margin）这五大模块，系统介绍前端的布局基础；并纠正了MDN一些错误。
 
 ### 05期：[《浅谈程序语言的垃圾回收机制》](https://mp.weixin.qq.com/s?__biz=MzU5NzEwMDQyNA==&mid=2247483808&idx=1&sn=06dcf160978dd022a4e5c5c99ad1b073&chksm=fe59d347c92e5a513f42bb071d97247e384d6a3d94cbcb8f03fb200171aa5aa0af1235e910ca&mpshare=1&scene=22&srcid=0824EHt1if6Nq61TpEDriDvj#rd)
 摘要：
