@@ -3,7 +3,9 @@
 <div style="text-align:center">
 <img src="https://rawgit.com/momopig/simplicity/master/code.png"/>
 <div>
-
+### 07期：[《实现兼容IE9+的svg截图和异步下载功能》](https://mp.weixin.qq.com/s/4Jf3SDW-JoeqwG5dvWv2Vw)
+摘要：
+一起来探索如何实现兼容IE9+的svg截图和异步下载功能，并借此来了解web截图实现方案的发展史、浏览器tained canvas的安全性限制以及node用于解决浏览器兼容性问题的理论基础；
 ### 06期：[《前端布局基础概述》](https://mp.weixin.qq.com/s/-LcNZWFFty2lWuND6uuNNA)
 摘要：
 从CSS盒模型及其发展史、元素的分类及其布局特性、格式化上下文(Formatting Context)、包含块、基本原理（文档流、浮动、清除浮动、定位、行框、margin）这五大模块，系统介绍前端的布局基础；并纠正了MDN一些错误；
