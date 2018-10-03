@@ -3,6 +3,7 @@
 <div style="text-align:center">
 <img src="https://rawgit.com/momopig/simplicity/master/code.png"/>
 <div>
+  
 ### 07期：[《实现兼容IE9+的svg截图和异步下载功能》](https://mp.weixin.qq.com/s/4Jf3SDW-JoeqwG5dvWv2Vw)
 摘要：
 一起来探索如何实现兼容IE9+的svg截图和异步下载功能，并借此来了解web截图实现方案的发展史、浏览器tained canvas的安全性限制以及node用于解决浏览器兼容性问题的理论基础；
