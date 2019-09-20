@@ -35,3 +35,7 @@
 ### 01期：[《web事件传播机制（捕获和冒泡）》](https://mp.weixin.qq.com/s?__biz=MzU5NzEwMDQyNA==&mid=2247483659&idx=1&sn=c1d672acb05337e345dd6c9469284cd9&chksm=fe59d3ecc92e5afa1f5a79d3de97ebed1fa7f7a0f009b10b9d5f6949d092af863b429be27a34&mpshare=1&scene=22&srcid=0614L4scUVJHSNGwJLJZAZtA#rd)
 摘要：
 从“陨石坠落”和“公交路线”的角度来理解web事件传播机制。
+
+## 相关链接
+### [加入读者交流群](https://mp.weixin.qq.com/s/S4DkVEq0rW2d-YRu0TYRlw)
+### [支持(赞赏)作者](https://mp.weixin.qq.com/s/YWKH3b76rcpr5qgA0MdOHQ)
