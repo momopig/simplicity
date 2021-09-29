@@ -36,6 +36,3 @@
 摘要：
 从“陨石坠落”和“公交路线”的角度来理解web事件传播机制。
 
-## 相关链接
-### [加入读者交流群](https://mp.weixin.qq.com/s/S4DkVEq0rW2d-YRu0TYRlw)
-### [支持(赞赏)作者](https://mp.weixin.qq.com/s/YWKH3b76rcpr5qgA0MdOHQ)
